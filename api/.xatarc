@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Forester-Kisiara-s-workspace-mv8895.us-east-1.xata.sh/db/linguaFlash",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
