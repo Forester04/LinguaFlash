@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "build",
+    "rootDir": "./src", // Update this line to the correct directory path
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "target": "es6",
+    "lib": ["esnext"],
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "module": "CommonJS"
+  }
+}

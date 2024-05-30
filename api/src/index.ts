@@ -2,12 +2,11 @@ import express from  'express';
 import 'isomorphic-fetch'
 import dotenv from 'dotenv';
 import { getXataClient } from './xata';
-import fetch from 'isomorphic-fetch';
 import { cardsCapitals, cardsProgramming, sets } from './seed_database';
 import { SetsRecord } from './xata'; // Import the SetsRecord type from the appropriate file
 import { Response } from 'express';
-dotenv.config();
 
+dotenv.config();
 
 const { PORT } = process.env || 3000;
 
