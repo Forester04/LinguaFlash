@@ -1,0 +1,13 @@
+{
+  "id": "mig_cp7j1pn641fcnetqh920",
+  "parentID": "mig_cp7j1joa2jhi217ddhi0",
+  "checksum": "1:efced303215b89b80025d4d6c628689886760077b7b93e55171f3ad53e81145a",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "user_sets",
+        "oldName": "user_set"
+      }
+    }
+  ]
+}

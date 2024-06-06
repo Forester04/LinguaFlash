@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp7j0ekoeq4h973vv510",
+  "parentID": "mig_cp7j014oeq4h973vv500",
+  "checksum": "1:f5a74a348a354c5868afaa8e303531ad82534bfec3ddab3141d108eb0db4a050",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "image",
+          "type": "file",
+          "file": {
+            "defaultPublicAccess": true
+          }
+        },
+        "table": "cards"
+      }
+    }
+  ]
+}

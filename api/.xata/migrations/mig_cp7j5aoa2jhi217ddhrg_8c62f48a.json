@@ -1,0 +1,17 @@
+{
+  "id": "mig_cp7j5aoa2jhi217ddhrg",
+  "parentID": "mig_cp7j4kga2jhi217ddhqg",
+  "checksum": "1:8c62f48a7d305fa198ab5b7369d6ede05566f96eb1038821db1a32d21733400d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "cards",
+          "type": "int",
+          "defaultValue": "0"
+        },
+        "table": "sets"
+      }
+    }
+  ]
+}

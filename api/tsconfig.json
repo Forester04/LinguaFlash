@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "outDir": "build",
-    "rootDir": "./src", // Update this line to the correct directory path
+    "rootDir": "./src",
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "target": "es6",

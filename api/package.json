@@ -20,7 +20,7 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "@xata.io/client": "^0.29.4",
+    "@xata.io/client": "^0.29.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "isomorphic-fetch": "^3.0.0",

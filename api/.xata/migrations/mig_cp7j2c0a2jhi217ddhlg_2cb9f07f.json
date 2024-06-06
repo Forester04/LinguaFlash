@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp7j2c0a2jhi217ddhlg",
+  "parentID": "mig_cp7j258a2jhi217ddhk0",
+  "checksum": "1:2cb9f07f4dbd436efc92f52413303daddd64525e4418ea9316e34a735a888850",
+  "operations": [
+    {
+      "addTable": {
+        "table": "learnings"
+      }
+    }
+  ]
+}

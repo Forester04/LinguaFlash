@@ -13,6 +13,13 @@ export const sets = [
     cards: 10,
     id: 'rec_ck44d1lah98vi3sb4oj0',
   },
+  {
+    title: 'Learn German Word Order',
+    description: 'A1 German Foundations',
+    private: false,
+    cards: 10,
+    id: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
 ];
 
 export const cardsCapitals = [
@@ -121,5 +128,57 @@ export const cardsProgramming = [
     question: "What does the acronym 'OOP' stand for in programming?",
     answer: 'Object-Oriented Programming',
     set: 'rec_ck44d1lah98vi3sb4oj0',
+  },
+];
+export const cardsGerman = [
+  {
+    question: "Er hat zwei Brüder.",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: 'Morgen fahre ich nach Manchester',
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: "Öffnet das Fenster!",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: "Ich spiele Gitarre.",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: 'Hast Du morgen Zeit?',
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: "Ich kann morgen nicht kommen, weil ich nach Manchester fahre.",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: "Morgen muss ich nach Manchester fahren.",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: "Ich arbeite.",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: "Ich arbeite bei Harrods.",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
+  },
+  {
+    question: "Ich wohne in Frankfurt.",
+    answer: '',
+    set: 'rec_cpeqaliju4r0ttp8c2j0',
   },
 ];

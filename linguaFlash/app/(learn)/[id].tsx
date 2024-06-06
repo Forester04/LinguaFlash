@@ -74,11 +74,13 @@ const Page = () => {
     } else {
       setShowResult(true);
       // Save the use rprogress
-      const correctResult = correctCards + (correct ? 1 : 0);
-      const wrongResult = wrongCards + (correct ? 0 : 1);
-      saveLearning(id, +limit, correctResult, wrongResult);
-      setCorrectCards(correctResult);
-      setWrongCards(wrongResult);
+      if (typeof id !== 'undefined' && typeof limit !== 'undefined') {
+        const correctResult = correctCards + (correct ? 1 : 0);
+        const wrongResult = wrongCards + (correct ? 0 : 1);
+        saveLearning(id, +limit, correctResult, wrongResult);
+        setCorrectCards(correctResult);
+        setWrongCards(wrongResult);
+        }
     }
 
     setShowFront(true);

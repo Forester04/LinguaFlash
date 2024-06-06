@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp7ivtoa2jhi217ddheg",
+  "parentID": "mig_cp7ivjga2jhi217ddhdg",
+  "checksum": "1:0896f048527f68f7a7ff07de543fb92cadb7ad1cebf7b5014254b1b3f1a6b7d2",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "question",
+          "type": "string"
+        },
+        "table": "cards"
+      }
+    }
+  ]
+}

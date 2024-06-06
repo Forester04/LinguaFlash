@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Switch, Image } from 'react-native';
 import React, { useState } from 'react';
 import { defaultStyleSheet } from '@/constants/Styles';
-import { TextInput } from 'react-native-gesture-handler';
+import { GestureHandlerRootView, TextInput } from 'react-native-gesture-handler';
 import * as ImagePicker from 'expo-image-picker';
 import { addToFavorites, createSet } from '@/data/api';
 import { useRouter } from 'expo-router';
@@ -37,7 +37,7 @@ const Page = () => {
   };
 
   return (
-    <>
+    <GestureHandlerRootView>
       <View style={[defaultStyleSheet.container, { marginTop: 20, marginHorizontal: 16 }]}>
         <TextInput
           style={defaultStyleSheet.input}
@@ -78,7 +78,7 @@ const Page = () => {
           <Text style={defaultStyleSheet.buttonText}>Create Set</Text>
         </TouchableOpacity>
       </View>
-    </>
+    </GestureHandlerRootView>
   );
 };
 

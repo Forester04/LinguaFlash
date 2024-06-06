@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-const API_URL = process.env.EXPO_PUBLIC_API_URL;
+
 export const USER_STORAGE_KEY = 'userid';
 
 //
@@ -28,23 +28,33 @@ export interface Card {
 export const createSet = async (set: Partial<Set>) => {
   const user = await AsyncStorage.getItem(USER_STORAGE_KEY);
 
-  const response = await fetch(`${API_URL}/sets`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ ...set, creator: user }),
-  });
-  return response.json();
+  try {
+    const response = await fetch('https://76be-105-160-117-82.ngrok-free.app/sets', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ ...set, creator: user }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Network request failed');
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Error creating set:', error);
+    throw error;
+  }
 };
 
 export const getSets = async (): Promise<Set[]> => {
-  const response = await fetch(`${API_URL}/sets`);
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/sets`);
   return response.json();
 };
 
 export const deleteSet = async (setid: string) => {
-  const response = await fetch(`${API_URL}/sets/${setid}`, {
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/sets/${setid}`, {
     method: 'DELETE',
   });
   return response.json();
@@ -53,20 +63,20 @@ export const deleteSet = async (setid: string) => {
 export const getMySets = async (): Promise<{ id: string; set: Set; canEdit: boolean }[]> => {
   const user = await AsyncStorage.getItem(USER_STORAGE_KEY);
 
-  const response = await fetch(`${API_URL}/usersets?user=${user}`);
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/usersets?user=${user}`);
   const data = await response.json();
   return data.map((item: any) => ({ ...item, canEdit: item.set.creator === user }));
 };
 
 export const getSet = async (id: string): Promise<Set> => {
-  const response = await fetch(`${API_URL}/sets/${id}`);
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/sets/${id}`);
   return response.json();
 };
 
 export const addToFavorites = async (set: string) => {
   const user = await AsyncStorage.getItem(USER_STORAGE_KEY);
 
-  const response = await fetch(`${API_URL}/usersets`, {
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/usersets`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -80,17 +90,17 @@ export const addToFavorites = async (set: string) => {
 // CARDS CALLS
 //
 export const getLearnCards = async (setid: string, limit: string) => {
-  const response = await fetch(`${API_URL}/cards/learn?setid=${setid}&limit=${limit}`);
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/cards/learn?setid=${setid}&limit=${limit}`);
   return response.json();
 };
 
 export const getCardsForSet = async (setid: string) => {
-  const response = await fetch(`${API_URL}/cards?setid=${setid}`);
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/cards?setid=${setid}`);
   return response.json();
 };
 
 export const createCard = async (card: Partial<Card>) => {
-  const response = await fetch(`${API_URL}/cards`, {
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/cards`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -112,7 +122,7 @@ export const saveLearning = async (
 ) => {
   const user = await AsyncStorage.getItem(USER_STORAGE_KEY);
 
-  const response = await fetch(`${API_URL}/learnings`, {
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/learnings`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -125,6 +135,6 @@ export const saveLearning = async (
 export const getUserLearnings = async () => {
   const user = await AsyncStorage.getItem(USER_STORAGE_KEY);
 
-  const response = await fetch(`${API_URL}/learnings?user=${user}`);
+  const response = await fetch(`https://76be-105-160-117-82.ngrok-free.app/learnings?user=${user}`);
   return response.json();
 };

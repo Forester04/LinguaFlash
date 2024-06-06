@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp7j3akoeq4h973vv53g",
+  "parentID": "mig_cp7j2c0a2jhi217ddhlg",
+  "checksum": "1:66da2b420c705ac5050aac5a99b49d17e0c4d9a27dc334db814ccb72f35e26d9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "set",
+          "type": "link",
+          "link": {
+            "table": "sets"
+          }
+        },
+        "table": "learnings"
+      }
+    }
+  ]
+}

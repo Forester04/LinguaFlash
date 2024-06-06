@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp7j3r8a2jhi217ddhng",
+  "parentID": "mig_cp7j3hoa2jhi217ddhmg",
+  "checksum": "1:e83b687d1989a16f73ea2bf5392059a6cce7dae68a146dce037e078c99dff5b4",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "cards_total",
+          "type": "int"
+        },
+        "table": "learnings"
+      }
+    }
+  ]
+}
